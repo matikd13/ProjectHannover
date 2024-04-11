@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 57479a6cf32d4e941ae20c853f1f1629
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208862
+  packageName: Top Down Hero 2D
+  packageVersion: 1.0
+  assetPath: Assets/TopDown_Soldier/Animations/Character_01/Attack.anim
+  uploadId: 473261
