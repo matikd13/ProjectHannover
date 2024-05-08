@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class PlayerAwareness : MonoBehaviour
 {
-    private bool AwareOfPlayer = false;
+    public bool AwareOfPlayer = false;
 
     [SerializeField] private float DistanceAwarness = 40f;
-    [SerializeField] private Transform Player = null;
+    private Transform Player;
 
     public Vector2 DirectionToPlayer;
+
+    private void Awake()
+    {
+        Player = FindFirstObjectByType<michalove_PlayerMovement>().transform;
+    }
 
     void Update()
     {

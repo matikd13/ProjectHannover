@@ -3788,8 +3788,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db5d8e915ebb4249a82551431c78a55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AwareOfPlayer: 0
   DistanceAwarness: 40
-  Player: {fileID: 632440447}
   DirectionToPlayer: {x: 0, y: 0}
 --- !u!114 &1542321392
 MonoBehaviour:
@@ -3803,6 +3803,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899030b759a2d434db7a5fd2226fc8e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 40
+  rotationSpeed: 70
 --- !u!1 &1767440844
 GameObject:
   m_ObjectHideFlags: 0
