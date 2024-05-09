@@ -1,3 +1,4 @@
+using Player;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +14,7 @@ public class PlayerAwareness : MonoBehaviour
 
     private void Awake()
     {
-        Player = FindFirstObjectByType<michalove_PlayerMovement>().transform;
+        Player = FindFirstObjectByType<PlayerMovement>().transform;
     }
 
     void Update()
@@ -25,13 +26,13 @@ public class PlayerAwareness : MonoBehaviour
         if (DirectionToPlayer.magnitude <= DistanceAwarness)
         {
             AwareOfPlayer = true;
-            Debug.Log("Akuku widze Cie");
-            Debug.Log(DirectionToPlayer.magnitude);
+            // Debug.Log("Akuku widze Cie");
+            // Debug.Log(DirectionToPlayer.magnitude);
         } 
         else
         {
             AwareOfPlayer = false;
-            Debug.Log("Nie widze gdzie jestes??");
+            // Debug.Log("Nie widze gdzie jestes??");
         }
     }
 }
