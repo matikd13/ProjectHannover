@@ -8,6 +8,7 @@ public class GunData : ScriptableObject
     [Header("Info")]
     public new string name;
     public Sprite image;
+    public Vector3 position;
     //public new string description;
 
     [Header("Shooting")]

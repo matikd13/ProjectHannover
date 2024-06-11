@@ -3587,7 +3587,7 @@ Transform:
   m_GameObject: {fileID: 505759932}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7091901, w: 0.7050174}
-  m_LocalPosition: {x: 1.1000004, y: 2.76, z: -14.077962}
+  m_LocalPosition: {x: 0.96, y: 2.84, z: 0}
   m_LocalScale: {x: 0.5247, y: 0.433, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3605,7 +3605,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67e39cc004e7cf548bb6bcefe70dc567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunData: {fileID: 11400000, guid: 9d46dab21bd768347bdfb59385315b41, type: 2}
+  gunData: {fileID: 11400000, guid: ab978ac54025cd9438cb3e0803318982, type: 2}
+  playerTransform: {fileID: 632440447}
 --- !u!212 &505759936
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3648,16 +3649,16 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
-  m_Sprite: {fileID: 0}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: be0bad5390709e8448cf566da354017a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 10.02, y: 5.02}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &600853087
