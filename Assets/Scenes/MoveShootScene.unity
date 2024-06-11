@@ -4385,25 +4385,6 @@ MonoBehaviour:
   m_MaximumFOV: 60
   m_MinimumOrthoSize: 1
   m_MaximumOrthoSize: 5000
---- !u!1 &1951001284 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 246058445603208886, guid: ef9a915e2a6226d45bfbf486884794bf, type: 3}
-  m_PrefabInstance: {fileID: 2016736240}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1951001290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1951001284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b46927af501f1124194312aa3724b2c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bulletPrefab: {fileID: 0}
-  _bulletSpeed: 0
 --- !u!1001 &2016736240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4479,10 +4460,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 246058445603208885, guid: ef9a915e2a6226d45bfbf486884794bf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 505759933}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 246058445603208886, guid: ef9a915e2a6226d45bfbf486884794bf, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1951001290}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef9a915e2a6226d45bfbf486884794bf, type: 3}
 --- !u!1001 &3491812185767211807
 PrefabInstance:

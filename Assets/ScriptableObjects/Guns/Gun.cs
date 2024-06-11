@@ -55,6 +55,7 @@ public class Gun : MonoBehaviour
             gunData.currentAmmo--;
             Debug.Log("Ammo after shoot: " + gunData.currentAmmo);
 
+
             // Add other shooting logic (e.g., recoil, sound) here
         }
         else
