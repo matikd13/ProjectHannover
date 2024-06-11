@@ -13,11 +13,14 @@ public class GunData : ScriptableObject
 
     [Header("Shooting")]
     public float damage;
+    public float shootingSpeed;
+    public GameObject bulletPrefab;
+    public float bulletSpeed;
 
     [Header("Reloading")]
     public float reloadSpeed;
-    public float shootingSpeed;
     public int magSize;
+    public int currentAmmo;
     [HideInInspector]
     public bool reloading;
 

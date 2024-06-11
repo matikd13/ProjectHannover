@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Assult Rifle
   image: {fileID: 21300000, guid: b511ce4ce8add3b498292308c99cfec3, type: 3}
+  position: {x: 0, y: 0, z: 0}
   damage: 5
-  reloadSpeed: 20
   shootingSpeed: 30
+  bulletPrefab: {fileID: 6698185134242536428, guid: bf55d4ef0c1664e4bb5620154bf32492, type: 3}
+  reloadSpeed: 20
   magSize: 50
+  currentAmmo: 10
   reloading: 0

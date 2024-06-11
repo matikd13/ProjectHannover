@@ -16,7 +16,10 @@ MonoBehaviour:
   image: {fileID: 21300000, guid: be0bad5390709e8448cf566da354017a, type: 3}
   position: {x: 0.96, y: 2.48, z: -14.07796}
   damage: 10
-  reloadSpeed: 10
-  shootingSpeed: 5
-  magSize: 20
+  shootingSpeed: 1
+  bulletPrefab: {fileID: 6698185134242536428, guid: bf55d4ef0c1664e4bb5620154bf32492, type: 3}
+  bulletSpeed: 10
+  reloadSpeed: 3
+  magSize: 7
+  currentAmmo: 1
   reloading: 0

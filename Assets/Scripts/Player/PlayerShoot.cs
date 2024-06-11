@@ -1,18 +1,24 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerShoot : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject _bulletPrefab;
 
-    // Update is called once per frame
+    [SerializeField] private float _bulletSpeed;
+
+
     void Update()
     {
-        
+      
+    }
+
+    private void OnFire(InputValue inputValue)
+    {
+
     }
 }
