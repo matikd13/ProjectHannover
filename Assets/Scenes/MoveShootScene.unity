@@ -4914,7 +4914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 100
   maxHealth: 100
-  onDamaged:
+  OnDamaged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1951001297}
@@ -4980,6 +4980,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnHealthChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2131842748}
+        m_TargetAssemblyTypeName: HealthBarUI, Assembly-CSharp
+        m_MethodName: UpdateHealthBar
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1951001296}
+          m_ObjectArgumentAssemblyTypeName: HealthController, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1951001297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4992,7 +5007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d32c0c5eb57774392d45a312e2b23a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invincibilityDuration: 3
+  invincibilityDuration: 1.5
 --- !u!114 &1951001298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5100,6 +5115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2131842747}
+  - component: {fileID: 2131842748}
   m_Layer: 5
   m_Name: Health Bar
   m_TagString: Untagged
@@ -5128,6 +5144,19 @@ RectTransform:
   m_AnchoredPosition: {x: 20, y: -20}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &2131842748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131842746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717eee432041176469b18a7a928f2891, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 1756454280}
 --- !u!1001 &3491812185767211807
 PrefabInstance:
   m_ObjectHideFlags: 0
