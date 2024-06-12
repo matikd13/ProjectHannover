@@ -12,6 +12,7 @@ public class Gun : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     SpriteRenderer spriteRenderer;
     float timeSinceLastShot;
+    float timeSinceLastReload;
 
     public void Start()
     {
@@ -29,6 +30,7 @@ public class Gun : MonoBehaviour
     {   
         spriteRenderer.sprite = gunData.image;
         timeSinceLastShot += Time.deltaTime;
+        timeSinceLastReload += Time.deltaTime;
 
         //Debug.Log(timeSinceLastShot);
 
@@ -37,6 +39,17 @@ public class Gun : MonoBehaviour
             Shoot();
             timeSinceLastShot = 0f;
         }
+
+        if(Input.GetKeyDown(KeyCode.R) && (gunData.currentAmmo != gunData.magSize) && (timeSinceLastReload > gunData.reloadSpeed))
+        {
+            ManualReload();
+            timeSinceLastReload = 0f;
+        }
+    }
+
+    void ManualReload()
+    {
+        StartCoroutine(Reload());
     }
 
     void Shoot()
