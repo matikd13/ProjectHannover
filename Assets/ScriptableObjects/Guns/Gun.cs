@@ -11,6 +11,7 @@ public class Gun : MonoBehaviour
     [SerializeField] Transform shootPoint;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private AmmoCounter ammoCounter;
+    [SerializeField] private AudioSource audioSource;
     SpriteRenderer spriteRenderer;
     float timeSinceLastShot;
     float timeSinceLastReload;
@@ -59,8 +60,8 @@ public class Gun : MonoBehaviour
         {
             Debug.Log("Shoot");
 
-
-
+            audioSource.Play();
+            
             // Instantiate the bullet at the shoot point
             GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
             Rigidbody2D rigidbody = bullet.GetComponent<Rigidbody2D>();

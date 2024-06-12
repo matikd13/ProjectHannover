@@ -18,8 +18,8 @@ MonoBehaviour:
   damage: 10
   shootingSpeed: 1
   bulletPrefab: {fileID: 6698185134242536428, guid: bf55d4ef0c1664e4bb5620154bf32492, type: 3}
-  bulletSpeed: 55
-  reloadSpeed: 4
+  bulletSpeed: 60
+  reloadSpeed: 3
   magSize: 7
-  currentAmmo: 0
+  currentAmmo: 7
   reloading: 0
