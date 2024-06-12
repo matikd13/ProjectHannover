@@ -10,6 +10,7 @@ public class Gun : MonoBehaviour
     [SerializeField] Transform playerTransform;
     [SerializeField] Transform shootPoint;
     [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private AmmoCounter ammoCounter;
     SpriteRenderer spriteRenderer;
     float timeSinceLastShot;
     float timeSinceLastReload;
@@ -20,7 +21,7 @@ public class Gun : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.enabled = true;
         timeSinceLastShot = 0f;
-
+        UpdateAmmoCounter();
         //Debug.Log(spriteRenderer.sprite);
         //Debug.Log(spriteRenderer.isVisible);
         //Debug.Log(gunData.name);
@@ -57,6 +58,9 @@ public class Gun : MonoBehaviour
         if (gunData.currentAmmo > 0 && !gunData.reloading)
         {
             Debug.Log("Shoot");
+
+
+
             // Instantiate the bullet at the shoot point
             GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
             Rigidbody2D rigidbody = bullet.GetComponent<Rigidbody2D>();
@@ -75,6 +79,7 @@ public class Gun : MonoBehaviour
 
             // Reduce ammo count
             gunData.currentAmmo--;
+            UpdateAmmoCounter();
             Debug.Log("Ammo after shoot: " + gunData.currentAmmo);
 
 
@@ -87,6 +92,14 @@ public class Gun : MonoBehaviour
         }
     }
 
+    void UpdateAmmoCounter()
+    {
+        if (ammoCounter != null)
+        {
+            ammoCounter.UpdateCounter(gunData.currentAmmo, gunData.magSize);
+        }
+    }
+
     IEnumerator Reload()
     {
         gunData.reloading = true;
@@ -95,5 +108,6 @@ public class Gun : MonoBehaviour
         gunData.currentAmmo = gunData.magSize;
         gunData.reloading = false;
         Debug.Log("Reloaded");
+        UpdateAmmoCounter();
     }
 }

@@ -24,8 +24,4 @@ public class GunData : ScriptableObject
     [HideInInspector]
     public bool reloading;
 
-    //public float recoil;
-
-
-
 }
