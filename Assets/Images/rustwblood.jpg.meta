@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rustwblood_0: 4722381967955306010
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
