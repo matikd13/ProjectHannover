@@ -4,21 +4,27 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private void Start()
+    private float damage;
+
+    public void Start()
     {
-        Debug.Log("Strza³a posz³a w pizdu");
-        // Destroy the bullet after 2 seconds to prevent memory leaks
+        Destroy(gameObject, 2f);
     }
 
-    private void Update()
+    public void SetDamage(float damage)
     {
-     
+        this.damage = damage;
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Handle collision with enemy or other objects
-        // For example, you can reduce enemy health here
-        Destroy(gameObject);
+        HealthController healthController = collision.GetComponent<HealthController>();
+        if (healthController != null && !collision.CompareTag("Player"))
+        {
+            // Apply damage to the HealthController
+            healthController.TakeDamage(damage);
+
+            // Destroy the bullet
+            Destroy(gameObject);
+        }
     }
 }

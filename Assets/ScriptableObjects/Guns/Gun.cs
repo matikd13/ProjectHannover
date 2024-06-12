@@ -62,6 +62,15 @@ public class Gun : MonoBehaviour
             Rigidbody2D rigidbody = bullet.GetComponent<Rigidbody2D>();
             Debug.Log("Ammo before shoot: " + gunData.currentAmmo);
 
+            Physics2D.IgnoreCollision(bullet.GetComponent<Collider2D>(), playerTransform.GetComponent<Collider2D>());
+
+            Bullet bulletScript = bullet.GetComponent<Bullet>();
+
+            if (bulletScript != null)
+            {
+                bulletScript.SetDamage(gunData.damage);
+            }
+
             rigidbody.velocity = gunData.bulletSpeed * transform.right;
 
             // Reduce ammo count
