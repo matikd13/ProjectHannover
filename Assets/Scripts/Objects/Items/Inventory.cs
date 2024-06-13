@@ -10,15 +10,28 @@ namespace Objects.Items
         public delegate void OnItemChanged();
 
         public OnItemChanged OnItemChangedCallback;
-
-        public int limit = 20;
-        public List<Item> items = new List<Item>();
+        
+        // public List<Item> items = new List<Item>();
 
         public bool Add(Item item)
         {
-            if (items.Count == limit) return false;
+            // if (items.Count == limit) return false;
 
-            items.Add(item);
+            // items.Add(item);
+
+            switch (item.name)
+            {
+                case "Ammunition":
+                    GameInstance.Instance.AddMag();
+                    break;
+                case "Health":
+                    GameInstance.Instance.playerHealth.AddHealth(50);
+                    break;
+                // case "Note":
+                //     GameInstance.Instance.EndGame();
+                //     break;
+            }
+
 
             OnItemChangedCallback?.Invoke();
 
@@ -29,7 +42,7 @@ namespace Objects.Items
         {
             if (item.isImportantItem) return false;
 
-            items.Remove(item);
+            // items.Remove(item);
             OnItemChangedCallback?.Invoke();
             return true;
         }

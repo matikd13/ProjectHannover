@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d3a7f2eea4e4079b98f2c36c6124d18, type: 3}
-  m_Name: New Item
+  m_Name: Health
   m_EditorClassIdentifier: 
-  name: Dzida laserowa
-  icon: {fileID: -4584001840792588798, guid: ca1fe683d8872314481b6dbcd87cb1d1, type: 3}
-  isDefaultItem: 0
+  name: Health
+  icon: {fileID: 21300000, guid: 67c16bd193d0f48c9b5bc39d1e710766, type: 3}
+  isImportantItem: 0

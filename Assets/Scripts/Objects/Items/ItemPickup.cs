@@ -7,7 +7,7 @@ namespace Objects.Items
 
         public Item item;
 
-        private void PickUp()
+        public void PickUp()
         {
             Debug.Log("Picked up: "+ item.name);
             GameInstance.Instance.playerController.RemoveFocus();

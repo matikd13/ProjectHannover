@@ -741,6 +741,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!114 &1357753905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -785,6 +786,8 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+=======
+>>>>>>> main
 --- !u!1 &1674018340
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,7 +818,11 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: b00f980a3a378c64da53674d39d3d7e8, type: 3}
   m_Resource: {fileID: 8300000, guid: b00f980a3a378c64da53674d39d3d7e8, type: 3}
   m_PlayOnAwake: 1
+<<<<<<< HEAD
   m_Volume: 0.696
+=======
+  m_Volume: 1
+>>>>>>> main
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -889,7 +896,11 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
+<<<<<<< HEAD
       value: 1.067
+=======
+      value: 1
+>>>>>>> main
       inSlope: 0
       outSlope: 0
       tangentMode: 0
