@@ -36,6 +36,8 @@ public class Gun : MonoBehaviour
 
         //Debug.Log(timeSinceLastShot);
 
+        if (GameInstance.Instance.playerController.focus != null) return;
+
         if (Input.GetMouseButtonDown(0) && timeSinceLastShot >= gunData.shootingSpeed)
         {
             Shoot();
