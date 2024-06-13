@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      thirdSlide_0: -4122244164544291275
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
