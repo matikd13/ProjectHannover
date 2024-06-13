@@ -14723,6 +14723,11 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2490536116022772695, guid: a35c94c6086d44b04801c71e8b792dd0, type: 3}
+      propertyPath: text
+      value: "mam nadziej\u0119, \u017Ce kto\u015B to przeczyta... udaj si\u0119
+        do B9 - czeka tam na Ciebie schronienie oraz jedyni ocalali... powodzenia"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490536116022772695, guid: a35c94c6086d44b04801c71e8b792dd0, type: 3}
       propertyPath: NoteUI
       value: 
       objectReference: {fileID: 1421119451}
