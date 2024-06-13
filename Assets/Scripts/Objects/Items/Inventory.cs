@@ -19,15 +19,19 @@ namespace Objects.Items
 
             // items.Add(item);
 
-            if (item.name == "Ammunition")
+            switch (item.name)
             {
-                GameInstance.Instance.AddMag();
+                case "Ammunition":
+                    GameInstance.Instance.AddMag();
+                    break;
+                case "Health":
+                    GameInstance.Instance.playerHealth.AddHealth(50);
+                    break;
+                // case "Note":
+                //     GameInstance.Instance.EndGame();
+                //     break;
             }
-            
-            if (item.name == "Health")
-            {
-                GameInstance.Instance.playerHealth.AddHealth(50);
-            }
+
 
             OnItemChangedCallback?.Invoke();
 
