@@ -50,4 +50,9 @@ public class GameInstance : MonoBehaviour
         magCount++;
         ammoCounter.UpdateMag();
     }
+
+    public void EndGame()
+    {
+        
+    }
 }
