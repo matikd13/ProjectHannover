@@ -418,7 +418,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rooftops_crop_0: 1961956515730759501
+      rooftops_crop_1: 4052084663549329371
+      rooftops_crop_10: -2748823493098897388
+      rooftops_crop_11: 6713045815084050975
+      rooftops_crop_12: 4785794513518023290
+      rooftops_crop_2: -342635660329135894
+      rooftops_crop_3: 4198455327813369063
+      rooftops_crop_4: 7851038283208503568
+      rooftops_crop_5: 1475583973700297310
+      rooftops_crop_6: -1758992173141570213
+      rooftops_crop_7: 3178216602720234391
+      rooftops_crop_8: 828782674036987851
+      rooftops_crop_9: 8866708642062321109
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

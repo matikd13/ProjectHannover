@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5711781b4d46e2247ab962460ef9a4c9
+guid: 1dd23616987307c4b9670ecd1469cb4d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3212929083745647808
-    second: blood_ground_0
+      213: -8097510503134406437
+    second: firstSlide_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blood_ground_0
+      name: firstSlide_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 31
-        height: 32
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 043c1da65026963d0800000000000000
-      internalID: -3212929083745647808
+      spriteID: bd8ddaf891ddf9f80800000000000000
+      internalID: -8097510503134406437
       vertices: []
       indices: 
       edges: []
@@ -130,8 +130,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      blood_ground_0: -3212929083745647808
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

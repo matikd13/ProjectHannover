@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         // Load the game scene (make sure the scene is added in Build Settings)
-        SceneManager.LoadScene("MapScene"); // Replace "GameScene" with the name of your game scene
+        SceneManager.LoadScene("Slideshow"); // Replace "GameScene" with the name of your game scene
     }
 
     public void QuitGame()

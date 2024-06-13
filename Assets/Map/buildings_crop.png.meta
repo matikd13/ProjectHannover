@@ -298,7 +298,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      buildings_crop_0: 363652316407903609
+      buildings_crop_1: 7977649402381185805
+      buildings_crop_2: 3692264074998049254
+      buildings_crop_3: 8856341608802903857
+      buildings_crop_4: 1076060444329332561
+      buildings_crop_5: 6643714635312326814
+      buildings_crop_6: -297973334273168927
+      buildings_crop_7: -7109729335319178531
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
