@@ -21,10 +21,15 @@ namespace Player
         }
         private void Update()
         {
-            // if (Input.GetMouseButtonDown(0))
-            // {
-            //     RemoveFocus();
-            // }
+            if (Input.GetMouseButtonDown(0))
+            {
+                Vector3 ray = _cam.ScreenToWorldPoint(Input.mousePosition);
+                RaycastHit2D hit = Physics2D.Raycast(ray, Vector2.zero);
+                if (hit)
+                {
+                    Debug.Log(hit.transform.name);
+                }
+            }
 
             if (Input.GetMouseButtonDown(1))
             {
@@ -32,12 +37,12 @@ namespace Player
                 RaycastHit2D hit = Physics2D.Raycast(ray, Vector2.zero);
                 if (hit)
                 {
+                    
                     Interactable interactable = hit.collider.GetComponent<Interactable>();
 
                     if (interactable != null)
                     {
                         float distance = (transform.position - interactable.interactionTransform.position).magnitude;
-
                         if (distance <= interactable.radius)
                             SetFocus(interactable);
                         else

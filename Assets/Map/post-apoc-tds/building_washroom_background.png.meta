@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      building_washroom_background_0: 4604786917759886275
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

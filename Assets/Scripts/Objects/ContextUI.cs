@@ -26,7 +26,6 @@ namespace Objects
 
         private void UpdateUI()
         {
-            Debug.Log("Updating");
             Clear();
             Interactable focused = GameInstance.Instance.playerController.focus;
 

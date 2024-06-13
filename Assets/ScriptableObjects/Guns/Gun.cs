@@ -29,12 +29,14 @@ public class Gun : MonoBehaviour
     }
 
     public void Update()
-    {   
+    {
         spriteRenderer.sprite = gunData.image;
         timeSinceLastShot += Time.deltaTime;
         timeSinceLastReload += Time.deltaTime;
 
         //Debug.Log(timeSinceLastShot);
+
+        if (GameInstance.Instance.playerController.focus != null) return;
 
         if (Input.GetMouseButtonDown(0) && timeSinceLastShot >= gunData.shootingSpeed)
         {
@@ -42,7 +44,7 @@ public class Gun : MonoBehaviour
             timeSinceLastShot = 0f;
         }
 
-        if(Input.GetKeyDown(KeyCode.R) && (gunData.currentAmmo != gunData.magSize) && (timeSinceLastReload > gunData.reloadSpeed))
+        if (Input.GetKeyDown(KeyCode.R) && (gunData.currentAmmo != gunData.magSize) && (timeSinceLastReload > gunData.reloadSpeed))
         {
             ManualReload();
             timeSinceLastReload = 0f;
@@ -61,7 +63,7 @@ public class Gun : MonoBehaviour
             Debug.Log("Shoot");
 
             audioSource.Play();
-            
+
             // Instantiate the bullet at the shoot point
             GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
             Rigidbody2D rigidbody = bullet.GetComponent<Rigidbody2D>();
@@ -83,14 +85,13 @@ public class Gun : MonoBehaviour
             UpdateAmmoCounter();
             Debug.Log("Ammo after shoot: " + gunData.currentAmmo);
 
+            if (gunData.currentAmmo == 0)
+                ManualReload();
+
 
             // Add other shooting logic (e.g., recoil, sound) here
         }
-        else
-        {
-            // Handle reloading or empty magazine here
-            StartCoroutine(Reload());
-        }
+
     }
 
     void UpdateAmmoCounter()
@@ -103,9 +104,14 @@ public class Gun : MonoBehaviour
 
     IEnumerator Reload()
     {
+        if (GameInstance.Instance.magCount == 0)
+            yield break;
+
+        GameInstance.Instance.magCount--;
         gunData.reloading = true;
         Debug.Log("Reloading...");
         yield return new WaitForSeconds(gunData.reloadSpeed);
+
         gunData.currentAmmo = gunData.magSize;
         gunData.reloading = false;
         Debug.Log("Reloaded");
