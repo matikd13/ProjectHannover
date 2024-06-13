@@ -7,6 +7,9 @@ public class GameInstance : MonoBehaviour
     public GameObject player;
     public Inventory playerInventory;
     public PlayerController playerController;
+    public HealthController playerHealth;
+    public AmmoCounter ammoCounter;
+    public int magCount = 3;
     
     #region Singleton
 
@@ -16,7 +19,7 @@ public class GameInstance : MonoBehaviour
     {
         if (Instance != null)
         {
-            Debug.LogWarning("More then one Inventory");
+            Debug.LogWarning("More then one GameInstance");
         }
         Instance = this;
         
@@ -33,8 +36,18 @@ public class GameInstance : MonoBehaviour
         {
             playerController = player.AddComponent<PlayerController>();
         }
+        
+        if (playerHealth == null)
+        {
+            playerHealth = player.GetComponent<HealthController>();
+        }
     }
 
     #endregion
 
+    public void AddMag()
+    {
+        magCount++;
+        ammoCounter.UpdateMag();
+    }
 }
